@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Belanja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Form Belanja</h2>
+        <form action="proses.php" method="POST">
+            <label for="nama_pelanggan">Nama Pelanggan:</label>
+            <input type="text" id="nama_pelanggan" name="nama_pelanggan" required>
+
+            <label for="produk">Pilih Produk:</label>
+            <select id="produk" name="produk" required>
+                <option value="">-- Pilih Produk --</option>
+                <option value="TV">TV</option>
+                <option value="Kulkas">Kulkas</option>
+                <option value="AC">AC</option>
+                <option value="Handphone">Handphone</option>
+                <option value="Mesin Cuci">Mesin Cuci</option>
+                <option value="Radio">Radio</option>
+            </select>
+
+            <label for="jumlah_beli">Jumlah Beli:</label>
+            <input type="number" id="jumlah_beli" name="jumlah_beli" min="1" required>
+
+            <label for="harga_satuan">Harga Satuan:</label>
+            <input type="number" id="harga_satuan" name="harga_satuan" min="0" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
